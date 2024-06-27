@@ -1,0 +1,16 @@
+{
+  "seller": [
+    {
+      "id": "e424",
+      "name": "saurav kumar",
+      "email": "abc1d@gmail.com",
+      "password": "abcdeef"
+    },
+    {
+      "id": "8774",
+      "name": "saurav",
+      "email": "sam@gmail.com",
+      "password": "qwerty"
+    }
+  ]
+}
