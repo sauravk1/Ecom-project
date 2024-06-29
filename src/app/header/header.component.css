@@ -7,6 +7,10 @@
     margin: 0;
     font-size: 40px;
 }
+.nav h1 a {
+    text-decoration: none;
+    color: blueviolet;
+}
 .nav ul {
     display: inline-flex;
     list-style: none;

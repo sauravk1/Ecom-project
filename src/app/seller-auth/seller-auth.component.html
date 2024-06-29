@@ -1,11 +1,24 @@
 <div class="seller-auth">
-    <div class="signup">
-        <h1>Seller Page</h1>
+    <div *ngIf="!showLogin" class="signup">
+        <h1>Seller Signup</h1>
         <form [formGroup]="signUpForm" (ngSubmit)="onSubmit()" class="common-form">
             <input class="form-input" type="text" placeholder="Enter Name" formControlName="name">
             <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
             <input class="form-input" type="password" placeholder="Enter Password" formControlName="password">
-            <button type="submit" class="form-button">SignUp</button>
+            <button type="submit" [disabled]="!signUpForm.valid" class="form-button">SignUp</button>
+            <a class="toggle" (click)="toggle()">Already have account? click here</a>
+        </form>
+    </div>
+    <!-- seller login page -->
+    <div *ngIf="showLogin" class="signup">
+        <h1>Seller Login</h1>
+       
+        <form [formGroup]="loginForm" (ngSubmit)="onLoginSubmit()" class="common-form">
+            <input class="form-input" type="email" placeholder="Enter Email" formControlName="email">
+            <input class="form-input" type="password" placeholder="Enter Password" formControlName="password">
+            <p *ngIf="authError">{{authError}}</p>
+            <button type="submit" [disabled]="!loginForm.valid" class="form-button">Login</button>
+            <a class="toggle" (click)="toggle()">New User? click here</a>
         </form>
     </div>
 </div>

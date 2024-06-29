@@ -4,3 +4,15 @@
     color: blueviolet;
     margin-bottom: 1rem;
 }
+.signup p {
+    text-align: center;
+    margin-top: 1rem;
+    color: red;
+    margin-bottom: 1rem;
+}
+.toggle {
+    color: blueviolet;
+    font-size: 14px;
+    margin-top: 20px;
+    cursor: pointer;
+}
