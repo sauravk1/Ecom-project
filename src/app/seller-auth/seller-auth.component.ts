@@ -13,8 +13,8 @@ export class SellerAuthComponent implements OnInit {
   constructor(private sellerService: SellerService, private router: Router) { }
   signUpForm!: FormGroup;
   loginForm!: FormGroup;
-  showLogin: boolean = false;
-  authError = '';  
+  showLogin = false;
+  authError: string = '';  
   ngOnInit(): void {
     this.sellerService.reloadSeller();
     this.signUpForm = new FormGroup({

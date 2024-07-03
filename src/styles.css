@@ -27,3 +27,7 @@ body {
     color: white;
     border: 1px solid blueviolet;
 }
+.carousel-control-next-icon, .carousel-control-prev-icon {
+    background-color: black;
+    border: 5px;
+}

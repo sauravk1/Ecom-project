@@ -30,7 +30,8 @@ export class SellerService {
     this.http.get(`http://localhost:3000/seller?email=${data.email}&password=${data.password}`, {
       observe: 'response'
     }).subscribe((res: any) => {
-      if(res && res.body && res.body.length) {
+      if(res && res.body && res.body.length ===1) {
+        this.isLoginError.emit(false);
         localStorage.setItem('seller', JSON.stringify(res.body))
         this.router.navigate(['seller-home']);
       } else {
